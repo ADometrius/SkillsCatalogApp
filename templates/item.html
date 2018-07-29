@@ -1,0 +1,67 @@
+<html>
+<head>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" 
+    integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <link rel=stylesheet type=text/css href="{{ url_for('static', filename='styles.css') }}">
+	</head>
+
+	
+	<body>
+				<nav class="navbar navbar-default">
+		  <div class="container-fluid">
+		    <div class="navbar-header">
+		      <a class="navbar-brand" href="/">Technical Skills Catalog</a>
+		    </div>
+		    <ul class="nav navbar-nav">
+		      <li class="active"><a href="{{ url_for('displayCategories') }}">Home</a></li>
+		      <li><a href="{{ url_for('allItems')}}">View List of Skills</a></li>
+		      <li><a href="{{ url_for('newItem')}}">Add Skill</a></li>
+		      <li><a href="{{ url_for('newCategory')}}">Add Category</a></li>
+		       </ul>
+		    	<a class="big-link login lobtn" href="/login">Login </a>
+		      <a class="big-link lbtn" href="/logout"> Logout</a>
+		  </div>
+		</nav>
+	<div class = 'pane'>
+		<div class = 'header'>
+		<a class = 'main-title' href="{{ url_for('displayCategories') }}"><h1>Technical Skills Catalog</h1></a>
+	</div>
+
+
+<div class = 'flash'>
+		      {% with messages = get_flashed_messages() %}
+      {% if messages %}
+          
+        <ul>
+        {% for message in messages %}
+            <li> <strong> {{ message }} </strong> </li>
+        {% endfor %}
+        </ul>
+        {% endif %}
+    {% endwith %}
+
+</div>
+
+<div class ="container">
+	<div class="row">
+		<div class="col-md-6"><h2>{{item.name}}</h2></div><div class = "col-md-6"></div>
+	</div>
+	<div class="row">
+		<div class = "col-md-12">
+	<p>{{item.description}}</p>
+</div>
+</div>
+</div>
+
+
+		
+		
+
+</div>
+</div>
+	</body>
+
+
+
+
+</html>
