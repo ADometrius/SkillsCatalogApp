@@ -1,0 +1,44 @@
+body {
+	background: #9e9a9a
+}
+.main-title{
+	text-align: center;
+	text-decoration: none;
+	color: #222;
+}
+.name{
+	font-size: large;
+}
+hr{
+	border: 1px solid black;
+}
+.box {
+	border: 2px solid black;
+	padding: 2%;
+	border-radius: 25px;
+}
+.big-link{
+	font-size: 20;
+	color: black;
+}
+.login{
+
+}
+
+.center{
+	text-align: center;
+}
+.pin-right{
+	float: right;
+}
+
+.lbtn{
+	position: absolute;
+  top: 20%;
+  right: 2%;
+}
+.lobtn {
+position: absolute;
+  top: 20%;
+  right: 10%;
+}
